@@ -30,18 +30,18 @@ const options = {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://astro-tech-blog-ten.vercel.app/',
-	markdown: {
-		syntaxHighlight: false,
-		// Disable syntax built-in syntax hightlighting from astro
-		rehypePlugins: [[rehypePrettyCode, options]],
-		remarkPlugins: [remarkReadingTime]
-	},
-	integrations: [tailwind(), react(), sitemap()],
-	output: 'static',
-	adapter: vercelStatic({
-		webAnalytics: {
-			enabled: true
-		}
-	})
+  site: 'https://byte-a-byte.vercel.app/',
+  markdown: {
+    syntaxHighlight: false,
+    // Disable syntax built-in syntax hightlighting from astro
+    rehypePlugins: [[rehypePrettyCode, options]],
+    remarkPlugins: [remarkReadingTime]
+  },
+  integrations: [tailwind(), react(), sitemap()],
+  output: 'static',
+  adapter: vercelStatic({
+    webAnalytics: {
+      enabled: true
+    }
+  })
 });
