@@ -2,13 +2,13 @@ import { MarkdownInstance } from "astro";
 
 export const formatDate = (pubDate: string) => {
   var options: Intl.DateTimeFormatOptions = {
-	weekday: 'short',
-	year: 'numeric',
-	month: 'long',
-	day: 'numeric'
-};
+    weekday: 'short',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  };
 
-  return new Date(pubDate).toLocaleDateString('en-US', options);
+  return new Date(pubDate).toLocaleDateString('pt-BR', options);
 }
 
 export const sortPostsByDate = (a: MarkdownInstance<any>, b: MarkdownInstance<any>) => {
@@ -17,7 +17,7 @@ export const sortPostsByDate = (a: MarkdownInstance<any>, b: MarkdownInstance<an
   if (pubDateA < pubDateB) {
     return 1;
   }
-  if(pubDateA > pubDateB) {
+  if (pubDateA > pubDateB) {
     return -1;
   }
   return 0;
