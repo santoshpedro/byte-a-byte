@@ -48,6 +48,8 @@ Um *dado* é um valor bruto, enquanto a *informação* é um dado processado e i
 
 *Em resumo*, dados são o conhecimento que temos sobre algo. Quando você curte uma foto em uma rede social aquilo se tornou um dado no banco de dados daquela rede. Enquanto a informação é o motivo pelo qual você curtiu aquela publicação, vamos supor que a publicação que você curtiu era um gato fofo. Esse dado sozinho não vale de nada, porém se juntarmos três ou mais curtidas(dados) em que você curtiu uma publicação pelo mesmo motivo(gatos fofos) então teremos a informação que aquele dado representa: *"Você gosta de animais/gatos fofos"*.
 
+
+
 ### O que é um banco de dados?
 
 ### Sistema de Banco de Dados
