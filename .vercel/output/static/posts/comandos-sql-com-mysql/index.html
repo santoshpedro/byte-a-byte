@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Comandos básicos de SQL com MySQL.</title><meta name="description" content="Tecnologia em pequenas doses"><meta name="author" content="Pedro"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" href="/rss.xml"><link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"><link rel="stylesheet" href="/_astro/imprint.CZUwTUJm.css">
+<style>.content pre{background-color:#cdc8ff0d;border-radius:.5rem;font-size:.9rem}.content code{overflow-x:auto}.content [data-rehype-pretty-code-figure] code{padding:0!important}.content pre>code span[data-line]{border-left:.5rem solid transparent;padding:0 .5rem}.content pre>code span:first-of-type{border-top-left-radius:.5rem;border-top-right-radius:.5rem;padding-top:.5rem}.content pre>code span:last-of-type{border-bottom-left-radius:.5rem;border-bottom-right-radius:.5rem;padding-bottom:.5rem}.content pre>code .highlighted{border-left:.5rem solid rgba(209,213,219,.6)!important;background-color:#e5e7eb0d}.content pre>code[data-line-numbers]{counter-reset:line}.content pre>code[data-line-numbers]>span[data-line]:before{counter-increment:line;content:counter(line);display:inline-block;margin-right:2rem;width:1rem;text-align:left;color:#7ca2dfad}.content pre>code>span[data-line]:before{content:"";display:inline-block;width:1rem;text-align:right}.content pre>code[data-line-numbers-max-digits="2"]>span[data-line]:before{width:2rem}.content code[data-line-numbers-max-digits="3"]>span[data-line]:before{width:3rem}
+</style><script type="module">localStorage.getItem("dark-mode")==="true"||!("dark-mode"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?(localStorage.setItem("dark-mode","true"),document.querySelector("html")?.classList.add("dark")):(localStorage.setItem("dark-mode","false"),document.querySelector("html")?.classList.remove("dark"));const t=document.querySelectorAll(".light-switch");t.length>0&&t.forEach((e,a)=>{localStorage.getItem("dark-mode")==="true"&&(e.checked=!0),e.addEventListener("click",()=>{const{checked:o}=e;t.forEach((c,d)=>{d!==a&&(c.checked=o)}),e.checked?(document.documentElement.classList.add("dark"),localStorage.setItem("dark-mode","true")):(document.documentElement.classList.remove("dark"),localStorage.setItem("dark-mode","false"))})});
+</script>
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+		var script = document.createElement('script');
+		script.defer = true;
+		script.src = '/_vercel/insights/script.js';
+		var head = document.querySelector('head');
+		head.appendChild(script);
+	</script></head> <body class="flex min-h-screen flex-col bg-stone-100 font-mono text-gray-950 dark:bg-stone-900 dark:text-white"> <div class="mx-auto w-full max-w-screen-lg px-4 py-6">  <div class="flex justify-between"> <div class="text-3xl font-bold"> <a href="/" class="flex items-center gap-2"> <div> <span class="pr-2 text-2xl text-gray-500">&lt;</span>byte<span class="text-orange-600">.</span>byte<span class="pl-2 text-2xl text-gray-500">/&gt;</span> </div></a> </div> <div class="flex items-center"> <nav> <ul class="hidden flex-row sm:flex"> <li><a href="/tags" class="mr-3 hover:text-orange-600">TAGS</a></li> <li><a href="/" class="hover:text-orange-600">BLOG</a></li> </ul> </nav> <div class="ml-3 flex flex-col justify-center"> <input type="checkbox" id="light-switch" class="light-switch sr-only"> <label class="tada relative cursor-pointer p-2" for="light-switch"> <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg"> <path class="fill-stone-800" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z"></path> <path class="fill-gray-900" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z"></path> </svg> <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg"> <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z"></path> <path class="fill-slate-500" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z"></path> </svg> <span class="sr-only">Switch to light / dark version</span> </label> </div> </div> </div>  </div>  <div class="flex-1">  <div class="mx-auto w-full max-w-screen-md"> <div class="mx-auto w-full max-w-screen-lg px-4 py-6">  <div class="flex flex-col items-center"> <p class="px-14 pb-4 pt-6 text-center text-4xl font-bold">Comandos básicos de SQL com MySQL.</p> <div class="pb-4"> <div class="flex flex-wrap"> <a href="/tags/SQL"><span class="mb-2 mr-2 rounded-xl bg-stone-600 px-3 py-1 text-xs font-bold uppercase text-white hover:bg-stone-500">
+#SQL </span></a><a href="/tags/MySQL"><span class="mb-2 mr-2 rounded-xl bg-stone-600 px-3 py-1 text-xs font-bold uppercase text-white hover:bg-stone-500">
+#MySQL </span></a><a href="/tags/Banco de Dados"><span class="mb-2 mr-2 rounded-xl bg-stone-600 px-3 py-1 text-xs font-bold uppercase text-white hover:bg-stone-500">
+#Banco de Dados </span></a> </div> </div> <div class="text-sm"> <span>seg., 11 de novembro de 2024</span> - <span>3 min read</span> </div>  </div>  </div> <div class="mx-auto w-full max-w-screen-lg px-4 py-6">  <div class="content prose mt-8 max-w-none text-base leading-8 text-black dark:prose-invert prose-code:rounded-lg prose-code:bg-stone-800 prose-code:p-1 prose-code:text-orange-600 prose-img:rounded-lg prose-img:shadow-xl dark:text-white prose-img:dark:shadow-stone-800"> <h2 id="pré-requisitos">Pré-requisitos:</h2>
+<p>Para obter o máximo de proveito deste post é necessário que você tenha o XAMPP instalado no seu computador. Para evitar estender este conteúdo e ir direto ao ponto eu não irei ensinar como instalar o XAMPP aqui.</p>
+<p>O site oficial para download do XAMPP se encontra neste link: <a href="https://www.apachefriends.org/pt_br/index.html">XAMPP Apache Friends</a></p>
+<h2 id="tópicos">Tópicos</h2>
+<ol>
+<li><a href="#o-que-%C3%A9-um-dado">O que é um dado?</a></li>
+<li><a href="#o-que-%C3%A9-um-banco-de-dados">O que é um banco de dados?</a>
+<ol>
+<li><a href="#sistema-de-banco-de-dados">Sistema de Banco de Dados</a></li>
+</ol>
+</li>
+<li><a href="#sql---structured-query-language">SQL - Structured Query Language</a></li>
+<li><a href="#o-que-%C3%A9-uma-queryconsulta">O que é uma query(consulta)?</a></li>
+<li><a href="#sql-x-mysql">SQL x MySQL</a></li>
+</ol>
+<h2 id="o-que-é-um-dado">O que é um dado?</h2>
+<p>Antes de entrar no mar você terá que aprender a ser um marinheiro, e para ser um bom marinheiro você tem que saber tudo sobre o seu barco. Mas qual parte do nosso  barco  queremos  aprender primeiro?
+E eu te respondo: <em>Os dados</em>. Tudo o que você faz usando SQL é consumindo ou manipulando dados, eles são a parte essencial e o motivo pelo qual aprendemos SQL e banco de dados.</p>
+<p><strong>Afinal,</strong> <em>o que realmente é um dado</em> <strong>?</strong></p>
+<p>Um <em>dado</em> é uma unidade básica de informação. Por si só um <em>dado</em> pode ser pouco claro e difícil de entender já que ele é apenas um valor bruto. Entretanto, quando organizado e interpretado ele pode virar uma informação se tornando útil para compreender o contexto em que estamos.</p>
+<p>Logo abaixo estão algumas formas que um dado pode assumir:</p>
+<ol>
+<li>Números: <em>25</em>, <em>3.4</em>, <em>129</em></li>
+<li>Palavras ou textos: “laptop”, “verde”, “sql”</li>
+<li>Datas e horários: <em>11 de novembro de 2024</em>, “11/11/2024”, <em>14:30</em></li>
+</ol>
+<p><strong>Dados vs. Informação</strong></p>
+<p>Um <em>dado</em> é um valor bruto, enquanto a <em>informação</em> é um dado processado e interpretado para ser mais fácil de entender e podermos tomar ações baseado nisso. Por exemplo, o número 25 sozinho não representa nada, e não nos ajuda a entender o contexto da situação. Porém, quando interpretamos e processamos o <em>dado</em> ele passa a ser uma informação, exemplo: <em>“25°C”</em>. Agora sabemos que o valor <em>25</em> se trata da <em>temperatura</em> tornando o entendimento mais fácil.</p>
+<p><em>Em resumo</em>, dados são o conhecimento que temos sobre algo. Quando você curte uma foto em uma rede social aquilo se tornou um dado no banco de dados daquela rede. Enquanto a informação é o motivo pelo qual você curtiu aquela publicação, vamos supor que a publicação que você curtiu era um gato fofo. Esse dado sozinho não vale de nada, porém se juntarmos três ou mais curtidas(dados) em que você curtiu uma publicação pelo mesmo motivo(gatos fofos) então teremos a informação que aquele dado representa: <em>“Você gosta de animais/gatos fofos”</em>.</p>
+<h3 id="o-que-é-um-banco-de-dados">O que é um banco de dados?</h3>
+<h3 id="sistema-de-banco-de-dados">Sistema de Banco de Dados</h3>
+<h3 id="sql---structured-query-language">SQL - Structured Query Language</h3>
+<h3 id="o-que-é-uma-queryconsulta">O que é uma query(consulta)?</h3>
+<h3 id="sql-x-mysql">SQL x MySQl</h3> </div>  </div>  </div>  </div> <div class="mx-auto w-full max-w-screen-lg px-4 py-6">  <footer class="text-center">
+© 2024 - made with ♥️
+</footer>  </div> </body></html>
