@@ -28,7 +28,7 @@ Vale lembrar que, apesar do meu esforço para simplificar, pode haver pequenos e
     1. [Sistema de Banco de Dados](#sistema-de-banco-de-dados)
 3. [SQL - Structured Query Language](#sql---structured-query-language)
 4. [O que é uma query(consulta)?](#o-que-é-uma-queryconsulta)
-5. [SQL x MySQL](#sql-x-mysql)
+5. [Resumo](#resumo)
 
 
 ## O que é um dado?
